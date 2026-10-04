@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" 
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Library Management System Login</title>
+  <link rel="stylesheet" href="LMS-Login.css" />
+</head>
+
+<body>
+  <nav>
+    <img src="uniabuja logo.jpg" alt="UNIVERSITY OF ABUJA">
+    <p>UNIVERSITY OF ABUJA</p>
+  </nav>
+
+  <div class="container">
+  <div class="login-box">
+    <h1>Library Management System</h1>
+    
+    <div class="title-btn" id="roleSwitch">
+      <div class="slider"></div>
+
+      <button type="button" class="option active" data-role="Student">Students</button>
+      <button type="button" class="option" data-role="Librarian">Librarian</button>
+    </div>
+    <div class="error-message" id="errorMessage"> Invalid credentials! Please try again.</div>
+    <form id="loginForm" method="post" action="https://localhost:7080/Home/Login">
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required />
+      </div>
+
+      <!-- DYNAMIC FIELD -->
+      <div class="input-group" id="extraField">
+        <label for="matric">Matric Number</label>
+        <input type="text" id="matric" name="matric" placeholder="Enter your matric number" required />
+      </div>
+
+      <button type="submit">Login</button>
+      <input type="hidden" id="role" name="role" value="Student" />
+      <div class="spinner" id="spinner"></div>
+    </form>
+
+    <p class="footer-text">© 2026 University Library System</p>
+  </div>
+</div>
+ <footer>
+  <div class="footer-container">
+
+    <div class="footer-section">
+      <h3>About Us</h3>
+      <p>
+        The University of Abuja is a leading federal institution in Nigeria,
+        dedicated to academic excellence, research, and innovation. The university
+        library provides resources that support teaching, learning, and research.
+      </p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Contact Us</h3>
+      <p>Airport Road, Abuja, FCT, Nigeria</p>
+      <p>
+  <i class="fa fa-phone"></i>
+  +234 903 683 6734
+</p>
+<p>
+  <i class="fa fa-envelope"></i>
+  <a href="mailto:info@uniabuja.edu.ng">
+    info@uniabuja.edu.ng
+  </a>
+</p>
+    </div>
+
+  </div>
+</footer>
+
+  <script src="LMS-Login.js"></script>
+
+</body> 
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Dashboard - University of Abuja Library</title>
+  <link rel="stylesheet" href="student-dashboard.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="dashboard-header">
+    <div class="header-left">
+      <img src="uniabuja logo.jpg" alt="University of Abuja" class="logo" />
+      <h2><i class="fa fa-book"></i> Library Management System</h2>
+    </div>
+    <div class="user-info">
+      <span id="userDisplayName"><i class="fa fa-user"></i> Student</span>
+      <button class="logout-btn" onclick="logout()"><i class="fa fa-sign-out"></i> Logout</button>
+    </div>
+  </header>
+
+  <!-- SIDEBAR + MAIN -->
+  <div class="dashboard-body">
+    
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <ul class="sidebar-menu">
+        <li class="active" onclick="showSection('dashboard', this)">
+          <i class="fa fa-home"></i> Dashboard
+        </li>
+        <li onclick="showSection('browse', this)">
+          <i class="fa fa-book"></i> Browse Books
+        </li>
+        <li onclick="showSection('borrowed', this)">
+          <i class="fa fa-bookmark"></i> My Borrowed Books
+        </li>
+        <li onclick="showSection('profile', this)">
+          <i class="fa fa-user"></i> My Profile
+        </li>
+      </ul>
+    </aside>
+
+    <!-- MAIN CONTENT - No cards -->
+    <main class="main-content" id="mainContent">
+      
+      <!-- WELCOME BANNER -->
+      <div class="welcome-banner">
+        <h3 id="welcomeTitle">Welcome!</h3>
+        <p id="welcomeSubtitle">Student Dashboard</p>
+      </div>
+
+      <!-- SECTION CONTENT -->
+      <div id="sectionContent"></div>
+
+    </main>
+  </div>
+
+  <script src="student-dashboard.js"></script>
+</body>
+</html>
